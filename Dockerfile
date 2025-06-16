@@ -30,7 +30,7 @@ COPY . ./
 
 # Create and run as a non-root user.
 RUN adduser -h /home/apify -D apify && \
-    chown -R apify:apify ./
+    chown -R apify ./
 USER apify
 
 # Run the image.
