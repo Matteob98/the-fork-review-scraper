@@ -29,9 +29,8 @@ RUN npm --quiet set progress=false \
 COPY . ./
 
 # Create and run as a non-root user.
-#RUN addgroup apify && \
-#    adduser -h /home/apify -D apify && \
-#    chown -R apify:apify ./
+RUN adduser -h /home/apify -D apify && \
+    chown -R apify:apify ./
 USER apify
 
 # Run the image.
